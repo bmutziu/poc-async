@@ -25,7 +25,7 @@ public class UserServiceImpl implements UserService {
 
   @Override
   public String createUser(String username) {
-    
+
     String correlationId=UUID.randomUUID().toString();
     userProducer.publish(username, correlationId);
     responseReceiverFromConsumer.receiveResponse(MESSAGE_QUEUE_RESPONSE, correlationId);
