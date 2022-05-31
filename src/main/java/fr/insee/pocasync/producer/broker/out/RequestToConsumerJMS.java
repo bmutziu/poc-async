@@ -10,8 +10,8 @@ import org.springframework.stereotype.Component;
 import javax.transaction.Transactional;
 
 @Slf4j
-@Component
 @ConditionalOnProperty(prefix = "notification", name = "service", havingValue = "jms")
+@Component
 public class RequestToConsumerJMS {
 
     @Autowired

@@ -23,8 +23,7 @@ public class UserServiceImplAMQP implements UserService {
 
     @Override
     public String createUser(String username) {
-        userProducer.publish(username);
-        return null;
+        return userProducer.publish(username);
     }
 
     @Override
