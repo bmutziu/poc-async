@@ -20,7 +20,6 @@ public class UserServiceImplAMQP implements UserService {
 
     private final UserRepository userRepository;
     private final RequestToConsumerAMQP userProducer;
-    private final ResponseFromConsumerJMS responseReceiverFromConsumer;
 
     @Override
     public String createUser(String username) {
