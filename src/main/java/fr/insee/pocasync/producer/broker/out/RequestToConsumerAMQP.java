@@ -46,6 +46,7 @@ public class RequestToConsumerAMQP {
                     userDTO);
 
             if (response != null) {
+                log.info("Message received in sync mode: {}", response);
                 userDTO.setRegistered(true);
                 userRepository.save(userDTO);
             }
@@ -63,7 +64,7 @@ public class RequestToConsumerAMQP {
 
             try {
                 String response = listenableFuture.get();
-                log.info("Message received: {}", response);
+                log.info("Message received in async mode: {}", response);
                 userDTO.setRegistered(true);
                 userRepository.save(userDTO);
             } catch (InterruptedException | ExecutionException e) {

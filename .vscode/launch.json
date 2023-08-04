@@ -1,0 +1,14 @@
+{
+    "configurations": [
+        {
+            "type": "java",
+            "name": "Spring Boot-Main<poc-async>",
+            "request": "launch",
+            "cwd": "${workspaceFolder}",
+            "mainClass": "fr.insee.Main",
+            "projectName": "poc-async",
+            "args": "",
+            "envFile": "${workspaceFolder}/.env"
+        }
+    ]
+}
